@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Climate_Crisis, Geist, Geist_Mono, Oi, Poppins } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,17 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const climatecrisis = Climate_Crisis({
+  subsets: ['latin'],
+  variable: "--font-climate-crisis"
+})
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ['400','500','700'],
+  variable: "--font-poppins",
+})
 
 export const metadata: Metadata = {
   title: "Prakash B - Portfolio",
@@ -25,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>
