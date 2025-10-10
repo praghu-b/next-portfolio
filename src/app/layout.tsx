@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Climate_Crisis, Geist, Geist_Mono, Oi, Poppins } from "next/font/google";
+import { Climate_Crisis, Geist, Geist_Mono, Oi, Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +18,10 @@ const climatecrisis = Climate_Crisis({
   variable: "--font-climate-crisis"
 })
 
-const poppins = Poppins({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: ['400','500','700'],
-  variable: "--font-poppins",
+  variable: "--font-roboto",
 })
 
 export const metadata: Metadata = {
@@ -36,8 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} antialiased`}
       >
+        <Navbar/>
         {children}
       </body>
     </html>

@@ -28,3 +28,7 @@ body {
 .font-climate {
   font-family: var(--font-climate-crisis);
 }
+
+.invert-img {
+  transform: scaleX(-1);
+}
