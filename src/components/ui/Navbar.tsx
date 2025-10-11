@@ -14,10 +14,10 @@ export default function Navbar() {
                 className="max-w-7xl mx-auto fixed top-10 left-10 right-10 flex items-center justify-start z-10"
             >
                 <motion.div
-                    className="min-w-[30vw] flex items-center justify-between rounded-full px-5 py-3 md:px-8 md:py-3 text-white bg-neutral-800"
-                    initial={{ y: "-50vh" }}
-                    animate={{ y: 0 }}
-                    transition={{ delay: 2, duration: 0.5, ease: "easeOut" }}
+                    className="min-w-[30vw] flex items-center justify-between rounded-full px-5 py-3 md:px-8 md:py-3 bg-neutral-800"
+                    initial={{ x: "-100vh" }}
+                    animate={{ x: 0 }}
+                    transition={{ delay: 2.5, duration: 0.3, ease: "easeOut" }}
                 >
                     <ul className="flex-1 flex items-center justify-between">
                         {navLinks.map(({ label, icon: Icon }) => (

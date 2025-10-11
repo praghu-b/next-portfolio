@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { easeOut, motion } from 'framer-motion';
 import Prakash from '../../../public/Me/Wings.png';
 import { Code, Download, GraduationCap, HeartHandshake } from 'lucide-react';
 
@@ -12,7 +12,7 @@ export default function HeroSection() {
                     className="flex-1 flex flex-col justify-center space-y-5"
                 >
                     <motion.h1
-                        className="font-climate text-7xl font-bold text-purple-700"
+                        className="font-climate text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-700"
                         initial={{ x: "-50vw" }}
                         animate={{ x: 0 }}
                         transition={{ duration: 0.3, ease: "backOut" }}
@@ -25,10 +25,10 @@ export default function HeroSection() {
                         animate={{ x: 0 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
                     >
-                        <GraduationCap className='h-10 w-10 p-2 rounded-full border text-white bg-black' />
+                        <GraduationCap className='h-10 w-10 p-2 rounded-full border text-white bg-black hover:rotate-z-45 transition-all duration-300' />
                         <p>Fresher</p>
                         <span className='text-purple-700'>&</span>
-                        <Code className='h-10 w-10 p-2 rounded-full border text-white bg-black' />
+                        <Code className='h-10 w-10 p-2 rounded-full border text-white bg-black hover:rotate-y-45 transition-all duration-300' />
                         <p>Full Stack Dev.</p>
                     </motion.h2>
                     <motion.p
@@ -44,32 +44,50 @@ export default function HeroSection() {
                     >
                         <Link href="mailto:prakashbalan555@gmail.com">
                             <motion.button
-                                className='flex items-center bg-purple-700 hover:bg-purple-900 hover:scale-105 px-3 py-2 gap-2 text-white shadow-xl shadow-gray-400 transition-all duration-400 cursor-pointer'
+                                className='relative flex items-center bg-purple-700 px-5 py-3 gap-2 border-2 border-purple-700 text-white hover:text-purple-700 transition-all duration-300 overflow-hidden'
                                 initial={{ x: "-250%" }}
                                 animate={{ x: 0 }}
                                 transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }}
+                                whileHover="hover"
                             >
-                                <HeartHandshake className='h-7 w-7' />
-                                Help on project?
+                                <motion.span
+                                    className='absolute left-0 right-0 h-full bg-white'
+                                    initial={{ x: "-100%", opacity: 0 }}
+                                    variants={{ "hover": { x: 0, opacity: 1 } }}
+                                    transition={{ ease: "easeOut" }}
+                                ></motion.span>
+                                <span className='flex items-center gap-2 z-10'>
+                                    <HeartHandshake className='h-6 w-6' />
+                                    Help on project?
+                                </span>
                             </motion.button>
                         </Link>
                         <Link href="./docs/Prakash.pdf" target='_blank'>
                             <motion.button
-                                className='flex items-center hover:scale-105 px-3 py-2 gap-2 text-purple-700 border-2 border-purple-700 transition-all duration-300'
+                                className='relative flex items-center px-5 py-3 gap-2 text-black hover:text-white border-2 border-purple-700 transition-all duration-300 overflow-hidden'
                                 initial={{ x: "-500%" }}
                                 animate={{ x: 0 }}
+                                whileHover="hover"
                                 transition={{ delay: 0.7, duration: 0.3, ease: "easeOut" }}
                             >
-                                <Download className='h-6 w-6' />
-                                Resume
+                                <motion.span
+                                    className='absolute left-0 right-0 h-full bg-purple-700'
+                                    initial={{ x: "-100%", opacity: 0 }}
+                                    variants={{ "hover": { x: 0, opacity: 1 } }}
+                                    transition={{ ease: "easeOut" }}
+                                ></motion.span>
+                                <span className='flex items-center gap-2 z-1'>
+                                    {/* <Download className='h-6 w-6' /> */}
+                                    View Resume
+                                </span>
                             </motion.button>
                         </Link>
                     </motion.div>
                 </motion.div>
                 <motion.div
                     className="flex-1 flex justify-center items-center"
-                    initial={{ x: "50vw" }}
-                    animate={{ x: 0 }}
+                    initial={{ x: "100vw", opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <Image src={Prakash} alt='Photo of Prakash' className='w-150 invert-img' />
