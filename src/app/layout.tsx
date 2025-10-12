@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Climate_Crisis, Geist, Geist_Mono, Oi, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
+import ProgressBar from "@/components/ui/ProgressBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const climatecrisis = Climate_Crisis({
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ['400','500','700'],
+  weight: ['400', '500', '700'],
   variable: "--font-roboto",
 })
 
@@ -39,7 +40,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} antialiased`}
       >
-        <Navbar/>
+        <ProgressBar />
+        <Navbar />
         {children}
       </body>
     </html>

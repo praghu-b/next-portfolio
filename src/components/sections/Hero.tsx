@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { easeOut, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Prakash from '../../../public/Me/Wings.png';
-import { Code, Download, GraduationCap, HeartHandshake } from 'lucide-react';
+import { Code, GraduationCap, HeartHandshake } from 'lucide-react';
 
 export default function HeroSection() {
     return (
