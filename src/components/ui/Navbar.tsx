@@ -11,34 +11,35 @@ export default function Navbar() {
     return (
         <div className="w-full">
             <motion.nav
-                className="max-w-7xl mx-auto fixed top-10 left-10 right-10 flex items-center justify-start z-10"
+                className="max-w-7xl mx-auto fixed top-8 left-10 right-10 flex items-center justify-start z-10"
             >
+                <motion.div className="flex-1">
+                    <span className="text-5xl font-bold font-climate">Pb</span>
+                </motion.div>
                 <motion.div
-                    className="min-w-[30vw] flex items-center justify-between rounded-full px-5 py-3 md:px-8 md:py-3 bg-neutral-800"
+                    className="flex-1 flex items-center justify-between rounded-full px-5 py-3 md:px-8 md:py-3 font-semibold text-black"
                     initial={{ x: "-100vh" }}
                     animate={{ x: 0 }}
                     transition={{ delay: 2.5, duration: 0.3, ease: "easeOut" }}
                 >
-                    <ul className="flex-1 flex items-center justify-between">
+                    <ul className="flex-1 flex items-center justify-between gap-5">
                         {navLinks.map(({ label, icon: Icon }) => (
                             <li key={label} className="">
                                 <Link href={`#${label.toLowerCase()}`}>
                                     <motion.div
-                                        className="flex items-center gap-2 text-white"
+                                        className="flex items-center gap-2"
                                         initial="rest"
                                         whileHover="hover"
                                         whileTap={{ color: 'indigo' }}
                                         animate="rest"
                                     >
-                                        {/* Icon */}
-                                        <Icon className="h-5 w-5 text-white" />
+                                        <Icon className="h-5 w-5" />
 
-                                        {/* Label that expands/contracts */}
                                         <motion.span
-                                            variants={{
-                                                rest: { width: 0, opacity: 0 },
-                                                hover: { width: "auto", opacity: 1 }
-                                            }}
+                                            // variants={{
+                                            //     rest: { width: 0, opacity: 0 },
+                                            //     hover: { width: "auto", opacity: 1 }
+                                            // }}
                                             transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
@@ -49,14 +50,20 @@ export default function Navbar() {
                             </li>
 
                         ))}
-                        <li key={'sayhello'} className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-700 via-cyan-600 to-purple-700 rounded-full">
-                            <button className="text-base text-white bg-neutral-800 m-[2.5px] px-3 py-1 rounded-full">
-                                Say Hello
-                            </button>
-                        </li>
                     </ul>
                 </motion.div>
-                <div className="fixed top-1/2 right-5 transform -translate-y-1/2">
+                <motion.div className="flex-1 flex items-center justify-end">
+                    <button className="text-lg text-white bg-neutral-800 px-4 py-2 rounded-full">
+                        Say Hello
+                    </button>
+                </motion.div>
+
+            </motion.nav>
+        </div>
+    );
+}
+
+{/* <div className="fixed top-1/2 right-5 transform -translate-y-1/2">
                     <ul className="flex-1 flex flex-col items-center justify-end gap-5">
                         {socialLinks.map(({ label, color, link, dur, icon: Icon }) => (
                             <motion.li
@@ -73,10 +80,8 @@ export default function Navbar() {
                                         whileTap={{ color: 'indigo' }}
                                         animate="rest"
                                     >
-                                        {/* Icon */}
                                         <Icon className={`h-10 w-10 p-2 rounded-xl ${color} text-white`} />
 
-                                        {/* Label that expands/contracts */}
                                         <motion.span
                                             variants={{
                                                 rest: { width: 0, opacity: 0 },
@@ -92,8 +97,4 @@ export default function Navbar() {
                             </motion.li>
                         ))}
                     </ul>
-                </div>
-            </motion.nav>
-        </div>
-    );
-}
+                </div> */}

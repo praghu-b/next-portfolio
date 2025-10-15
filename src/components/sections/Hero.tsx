@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Prakash from '../../../public/Me/Wings.png';
+import Prakash from '../../../public/Me/NoBorderNoWings.png';
 import { Code, GraduationCap, HeartHandshake } from 'lucide-react';
 
 export default function HeroSection() {
     return (
         <section className="min-h-screen w-full flex items-center">
             <div className='max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8 md:px-16'>
-                <motion.div
+                {/* <motion.div
                     className="flex-1 flex flex-col justify-center space-y-5"
                 >
                     <motion.h1
@@ -77,13 +77,12 @@ export default function HeroSection() {
                                     transition={{ ease: "easeOut" }}
                                 ></motion.span>
                                 <span className='flex items-center gap-2 z-1'>
-                                    {/* <Download className='h-6 w-6' /> */}
                                     View Resume
                                 </span>
                             </motion.button>
                         </Link>
                     </motion.div>
-                </motion.div>
+                </motion.div> */}
                 <motion.div
                     className="flex-1 flex justify-center items-center"
                     initial={{ x: "100vw", opacity: 0 }}
