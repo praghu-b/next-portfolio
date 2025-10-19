@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Climate_Crisis, Geist, Geist_Mono, Oi, Roboto } from "next/font/google";
+import { Bebas_Neue, Climate_Crisis, Geist, Geist_Mono, Knewave, Petit_Formal_Script, Playwrite_DE_SAS, Roboto, Syne_Mono, The_Nautigal, Zen_Dots } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import ProgressBar from "@/components/ui/ProgressBar";
@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const climatecrisis = Climate_Crisis({
+const climatecrisis = Bebas_Neue({
   subsets: ['latin'],
+  weight: ['400'],
   variable: "--font-climate-crisis"
 })
 
@@ -23,6 +24,12 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ['400', '500', '700'],
   variable: "--font-roboto",
+})
+
+const fancy = Playwrite_DE_SAS({
+  // subsets: ["latin"],
+  weight: ['400'],
+  variable: "--font-fancy"
 })
 
 export const metadata: Metadata = {
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} ${fancy.variable} antialiased`}
       >
         <ProgressBar />
         <Navbar />

@@ -18,9 +18,6 @@ export default function Navbar() {
                 </motion.div>
                 <motion.div
                     className="flex-1 flex items-center justify-between rounded-full px-5 py-3 md:px-8 md:py-3 font-semibold text-black"
-                    initial={{ x: "-100vh" }}
-                    animate={{ x: 0 }}
-                    transition={{ delay: 2.5, duration: 0.3, ease: "easeOut" }}
                 >
                     <ul className="flex-1 flex items-center justify-between gap-5">
                         {navLinks.map(({ label, icon: Icon }) => (
@@ -28,19 +25,10 @@ export default function Navbar() {
                                 <Link href={`#${label.toLowerCase()}`}>
                                     <motion.div
                                         className="flex items-center gap-2"
-                                        initial="rest"
-                                        whileHover="hover"
-                                        whileTap={{ color: 'indigo' }}
-                                        animate="rest"
                                     >
                                         <Icon className="h-5 w-5" />
 
                                         <motion.span
-                                            // variants={{
-                                            //     rest: { width: 0, opacity: 0 },
-                                            //     hover: { width: "auto", opacity: 1 }
-                                            // }}
-                                            transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
                                             {label}

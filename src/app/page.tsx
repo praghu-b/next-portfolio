@@ -11,13 +11,13 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
 
   return (
-    <div className="relative min-h-screen">
-      <motion.div className="sticky top-0">
+    <div className="relative">
+      <motion.div className="">
         <HeroSection />
       </motion.div>
-      <motion.div className="sticky top-0" style={{}}>
+      {/* <motion.div className="sticky top-0" style={{}}>
         <AboutSection />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

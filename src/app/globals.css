@@ -29,6 +29,10 @@ body {
   font-family: var(--font-climate-crisis);
 }
 
+.font-fancy {
+  font-family: var(--font-fancy);
+}
+
 .invert-img {
   transform: scaleX(-1);
 }
