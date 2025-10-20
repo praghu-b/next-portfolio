@@ -15,9 +15,9 @@ export default function Home() {
       <motion.div className="">
         <HeroSection />
       </motion.div>
-      {/* <motion.div className="sticky top-0" style={{}}>
+      <motion.div className="sticky top-0" style={{}}>
         <AboutSection />
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 }

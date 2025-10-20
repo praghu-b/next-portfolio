@@ -68,7 +68,7 @@ export default function HeroSection() {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
-                <Image src={Prakash} alt='Image of Prakash' className='w-200' />
+                <Image src={Prakash} alt='Image of Prakash' className='w-200 bg-gradient-to-b from-0% via-white/0 to-transparent' />
             </motion.div>
         </section>
     )
