@@ -58,7 +58,7 @@ export default function Navbar() {
                     </ul>
                 </motion.div>
                 <motion.div className="flex-1 flex items-center justify-end">
-                    <button className="text-lg text-white bg-neutral-800 px-4 py-2 rounded-full">
+                    <button className="text-lg text-white bg-primary px-4 py-2 rounded-full">
                         Say Hello
                     </button>
                 </motion.div>
@@ -67,39 +67,3 @@ export default function Navbar() {
         </div>
     );
 }
-
-{/* <div className="fixed top-1/2 right-5 transform -translate-y-1/2">
-                    <ul className="flex-1 flex flex-col items-center justify-end gap-5">
-                        {socialLinks.map(({ label, color, link, dur, icon: Icon }) => (
-                            <motion.li
-                                key={label}
-                                initial={{ x: "200%" }}
-                                animate={{ x: 0 }}
-                                transition={{ delay: dur+1, duration: 0.3, ease: "easeOut" }}
-                            >
-                                <Link href={link} target="_blank">
-                                    <motion.div
-                                        className="flex items-center gap-2 text-lg text-black font-semibold"
-                                        initial="rest"
-                                        whileHover="hover"
-                                        whileTap={{ color: 'indigo' }}
-                                        animate="rest"
-                                    >
-                                        <Icon className={`h-10 w-10 p-2 rounded-xl ${color} text-white`} />
-
-                                        <motion.span
-                                            variants={{
-                                                rest: { width: 0, opacity: 0 },
-                                                hover: { width: "auto", opacity: 1 }
-                                            }}
-                                            transition={{ duration: 0.3 }}
-                                            className="overflow-hidden"
-                                        >
-                                            {label}
-                                        </motion.span>
-                                    </motion.div>
-                                </Link>
-                            </motion.li>
-                        ))}
-                    </ul>
-                </div> */}
