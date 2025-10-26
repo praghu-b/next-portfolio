@@ -1,19 +1,44 @@
+import Image from "next/image"
+import Prakash from '../../../public/me/prakash-full.jpg';
+import { Linkedin, Mail, Github, Instagram } from "lucide-react";
+import Link from "next/link";
 
 export default function About() {
+    const socialLinks = [{ label: "LinkedIn", icon: Linkedin, link: 'https://linkedin.com/in/prakash-balamurugan' }, { label: "Email", icon: Mail, link: 'mailto:prakashbalan555@gmail.com' }, { label: "GitHub", icon: Github, link: 'https://github.com/praghu-b' }, { label: "Instagram", icon: Instagram, link: 'https://instagram.com/praghu._b' }]
 
     return (
-        <section className="w-full min-h-screen">
-            <div className="max-w-7xl mx-auto flex items-center justify-between mt-20">
-                <div className="flex-1 h-full bg-purple-500 md:p-10 text-white font-bold font-climate">
-                    <p className="text-9xl">Me ?</p>
-                    <p className="text-8xl">I'm Prakash !</p>
+        <section className="w-full min-h-screen flex items-center justify-center">
+            <div className="max-w-7xl flex items-center justify-between">
+                <div className="flex-1 flex items-center h-full bg-primary text-white font-bold font-climate">
+                    <div className="flex-1 md:p-2 tracking-widest">
+                        <p className="text-9xl">Me ?</p>
+                        <p className="text-7xl">I'm Prakash !</p>
+                    </div>
+                    <div className="flex-1 overflow-hidden">
+                        <Image
+                            src={Prakash}
+                            alt="Image of Prakash"
+                            className="w-full h-full object-cover transform scale-170 -translate-y-1/4"
+                        />
+                    </div>
                 </div>
-                <div className="flex-1 md:ml-5 md:px-10 py-5 space-y-5">
-                    <p className="text-3xl font-bold mb-5">About Me</p>
-                    <ul className="space-y-5 text-xl">
-                        <li>I'm a Full-stack Developer as well as a Computer Science final year Student with 20+ months of internship experience under two firms. </li>
-                        <li>I specialize in Frontend(React.js, Next.js) and Backend(Express.js, Django) development and currently exploring Agentic AI(LangGraph, LangChain) and Data Engineering as well. </li>
-                        <li>I've 20+ months of internship experience in two smaller firms in coimbatore.</li>
+                <div className="flex-1 text-lg tracking-wider leading-relaxed md:px-10 py-5 md:space-y-8">
+                    <p className="text-5xl font-bold md:mb-10">About Me</p>
+                    <p>I'm a final-year Computer Science student at SNS College of Technology, Coimbatore. Graduating with <span className="font-semibold">20 months of paid internship experience</span>. I build practical, full-stack solutions and am now expanding into data-driven and AI-powered systems. </p>
+                    <ul className="list-disc list-inside">
+                        <li><span className="font-bold">Expertise:</span> MERN Stack, Next.js, Django</li>
+                        <li><span className="font-bold">Exploring:</span> Agentic AI (LangGraph) & Data Engineering</li>
+                        <li><span className="font-bold">Currently:</span> Seeking a full-time Software Engineer role or Internship cum placement opportunity.</li>
+                    </ul>
+                    <p>When I'm not coding, I'm naturally curious and enjoy doing 'deep dives' on new topics I discover.</p>
+                    <ul className="flex items-center mt-10 space-x-5">
+                        {socialLinks.map(({label, link, icon: Icon}) => (
+                            <li key={label}>
+                               <Link href={link}>
+                                    <Icon className="h-8 w-8"/>
+                               </Link> 
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

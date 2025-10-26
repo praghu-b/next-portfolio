@@ -6,7 +6,7 @@ import { Code, GraduationCap, HeartHandshake } from 'lucide-react';
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-white via-purple-300 to-white">
+        <section className="relative min-h-screen w-full flex items-center justify-center">
             <div className='absolute w-full md:max-w-7xl flex flex-col items-center justify-between md:px-10 space-y-20 md:mt-50'>
                 <div className='w-full flex font-fancy items-center justify-center text-center'>
                     <motion.div
@@ -28,7 +28,7 @@ export default function HeroSection() {
                 </div>
                 <div className='w-full flex items-center justify-between'>
                     <motion.div
-                        className='bg-white flex items-center gap-5 px-4 py-2 rounded-full font-semibold'
+                        className='bg-accent text-foreground flex items-center gap-5 px-4 py-2 rounded-full font-semibold'
                         initial={{ x: "-100vw" }}
                         animate={{ x: 0 }}
                         transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
@@ -37,7 +37,7 @@ export default function HeroSection() {
                         <span className='text-sm'>Available To Collaborate</span>
                     </motion.div>
                     <motion.div
-                        className='backdrop-blur-lg bg-white/20 border border-white rounded-2xl px-4 py-2 shadow'
+                        className='backdrop-blur-lg bg-muted border border-muted rounded-2xl px-4 py-2 shadow'
                         initial={{ x: "100vw" }}
                         animate={{ x: 0 }}
                         transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
