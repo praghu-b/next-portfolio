@@ -9,10 +9,10 @@ export default function About() {
     return (
         <section className="w-full min-h-screen flex items-center justify-center">
             <div className="max-w-7xl flex items-center justify-between">
-                <div className="flex-1 flex items-center h-full bg-primary text-white font-bold font-climate">
+                <div className="flex-1 flex text-center items-center h-full bg-primary text-white font-bold font-climate">
                     <div className="flex-1 md:p-2 tracking-widest">
-                        <p className="text-9xl">Me ?</p>
-                        <p className="text-7xl">I'm Prakash !</p>
+                        <p className="text-9xl">Me?</p>
+                        <p className="text-7xl">I'm Prakash!</p>
                     </div>
                     <div className="flex-1 overflow-hidden">
                         <Image
@@ -31,15 +31,17 @@ export default function About() {
                         <li><span className="font-bold">Currently:</span> Seeking a full-time Software Engineer role or Internship cum placement opportunity.</li>
                     </ul>
                     <p>When I'm not coding, I'm naturally curious and enjoy doing 'deep dives' on new topics I discover.</p>
-                    <ul className="flex items-center mt-10 space-x-5">
-                        {socialLinks.map(({label, link, icon: Icon}) => (
-                            <li key={label}>
-                               <Link href={link}>
-                                    <Icon className="h-8 w-8"/>
-                               </Link> 
-                            </li>
-                        ))}
-                    </ul>
+                    <div className="">
+                        <ul className="flex items-center mt-10 space-x-5">
+                            {socialLinks.map(({ label, link, icon: Icon }) => (
+                                <li key={label}>
+                                    <Link href={link}>
+                                        <Icon className="h-8 w-8" />
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
