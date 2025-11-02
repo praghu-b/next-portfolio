@@ -9,20 +9,15 @@ export default function About() {
     return (
         <section className="w-full min-h-screen flex items-center justify-center">
             <div className="max-w-7xl flex items-center justify-between">
-                <div className="flex-1 flex text-center items-center h-full bg-primary text-white font-bold font-climate">
-                    <div className="flex-1 md:p-2 tracking-widest">
-                        <p className="text-9xl">Me?</p>
-                        <p className="text-7xl">I'm Prakash!</p>
-                    </div>
-                    <div className="flex-1 overflow-hidden">
-                        <Image
-                            src={Prakash}
-                            alt="Image of Prakash"
-                            className="w-full h-full object-cover transform scale-170 -translate-y-1/4"
-                        />
-                    </div>
+                <div className="flex-2 h-[600px] bg-primary relative overflow-hidden">
+                    <Image
+                        src={Prakash}
+                        alt="Image of Prakash"
+                        fill
+                        className="object-cover object-[20%_80%]" // change position here
+                    />
                 </div>
-                <div className="flex-1 text-lg tracking-wider leading-relaxed md:px-10 py-5 md:space-y-8">
+                <div className="flex-3 text-lg tracking-wider leading-relaxed md:px-10 py-5 md:space-y-8">
                     <p className="text-5xl font-bold md:mb-10">About Me</p>
                     <p>I'm a final-year Computer Science student at SNS College of Technology, Coimbatore. Graduating with <span className="font-semibold">20 months of paid internship experience</span>. I build practical, full-stack solutions and am now expanding into data-driven and AI-powered systems. </p>
                     <ul className="list-disc list-inside">
