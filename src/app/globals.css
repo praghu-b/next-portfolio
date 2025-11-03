@@ -3,11 +3,16 @@
 :root {
   --background: #FFFFFF;
   --foreground: #171717;
-  --primary: #171717;      /* Black for buttons/links */
-  --secondary: #737373;    /* Medium gray for subtext */
-  --muted: #F5F5F5;        /* Light gray for backgrounds */
-  --accent: #737373;       /* Medium gray for highlights */
-  --destructive: #DC2626;  /* Red for warnings */
+  --primary: #171717;
+  /* Black for buttons/links */
+  --secondary: #737373;
+  /* Medium gray for subtext */
+  --muted: #F5F5F5;
+  /* Light gray for backgrounds */
+  --accent: #737373;
+  /* Medium gray for highlights */
+  --destructive: #DC2626;
+  /* Red for warnings */
 }
 
 @theme inline {
@@ -38,4 +43,14 @@ body {
 
 .invert-img {
   transform: scaleX(-1);
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
