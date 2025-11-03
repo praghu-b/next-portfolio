@@ -20,7 +20,7 @@ export default function HeroSection() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                     <div className='overflow-hidden rounded-full border-10 border-white shadow-2xl shadow-black/70'>
-                        <Image src={Prakash} alt='Image of Prakash' className='w-[400px] h-[400px] object-cover object-[30%_70%]' />
+                        <Image src={Prakash} alt='Image of Prakash' className='w-[400px] h-[400px] scale-115 object-cover object-[30%_70%]' />
                     </div>
                     <p className='absolute top-15 left-5 bg-primary text-white py-2 px-4 rounded-full font-semibold text-xl'>Hello! I'm Prakash</p>
                 </motion.div>
