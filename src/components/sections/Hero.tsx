@@ -24,16 +24,45 @@ export default function HeroSection() {
                     </div>
                     <p className='absolute top-15 left-5 bg-primary text-white py-2 px-4 rounded-full font-semibold text-xl'>Hello! I'm Prakash</p>
                 </motion.div>
-                <div className='flex-3 space-y-8'>
-                    <h3 className='text-6xl font-bold md:w-7/8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent'>Building web apps that think, automate, and perform.</h3>
-                    <h6 className='text-lg text-accent md:w-4/5'>I build scalable web apps, intelligent systems, and products that blend creativity with automation. Passionate about turning complex ideas into real-world digital experiences.</h6>
-                    <div className="flex items-center space-x-5">
+                <motion.div
+                    className='flex-3 space-y-8'
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7, delay: 0.3 }}
+                >
+                    <motion.h3
+                        className='text-6xl font-bold md:w-7/8 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent'
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        Building web apps that think, automate, and perform.
+                    </motion.h3>
+                    <motion.h6
+                        className='text-lg text-accent md:w-4/5'
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
+                        I build scalable web apps, intelligent systems, and products that blend creativity with automation. Passionate about turning complex ideas into real-world digital experiences.
+                    </motion.h6>
+                    <motion.div
+                        className="flex items-center space-x-5"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.8 }}
+                    >
                         <Button label={"Download CV"} variant='primary' icon={Download} onClick={() => window.open("/docs/Prakash_Resume.pdf")} />
                         <Button label={"View Projects"} variant='outline' icon={Code2} href='#projects' />
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
-            <div className='absolute bottom-10'>
+            <motion.div
+                className='absolute bottom-10'
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 1 }}
+            >
                 <ul className='bg-primary py-2 px-8 rounded-full flex items-center gap-8'>
                     {socialLinks.map(({ label, link, icon: Icon }) => (
                         <motion.li
@@ -63,7 +92,7 @@ export default function HeroSection() {
                     ))}
                 </ul>
 
-            </div>
+            </motion.div>
         </section >
     )
 }
