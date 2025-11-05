@@ -23,7 +23,7 @@ export default function About() {
     ]
 
     return (
-        <section className="w-full min-h-screen flex items-center justify-center mt-20">
+        <section className="w-full min-h-screen flex items-center justify-center">
             <motion.div
                 className="max-w-7xl"
                 initial={{ opacity: 0, y: 50 }}
@@ -39,7 +39,7 @@ export default function About() {
                 >
                     <p className="text-4xl font-bold">About Me</p>
                     <motion.p
-                        className=" text-lg text-accent font-semibold"
+                        className="text-lg text-accent font-semibold"
                         animate={{ opacity: [0.5, 1, 0.5] }}
                         transition={{ repeat: Infinity, duration: 2 }}
                     >
@@ -115,7 +115,7 @@ export default function About() {
                             transition={{ duration: 0.6 }}
                         >
                             <motion.div
-                                className={`w-1/3 p-5 text-center bg-primary border-2 rounded-3xl shadow-lg space-y-3`}
+                                className={`w-1/3 p-5 text-center bg-gradient-to-r from-black to-primary border-2 rounded-3xl shadow-lg space-y-3`}
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ type: "spring", stiffness: 200 }}
                             >
