@@ -3,6 +3,7 @@ import Image from "next/image";
 import HeroSection from "@/components/sections/Hero";
 import AboutSection from "@/components/sections/About";
 import ProjectSection from "@/components/sections/Project";
+import SkillSection from "@/components/sections/Skill";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
@@ -21,6 +22,9 @@ export default function Home() {
       </motion.div>
       <motion.div>
         <ProjectSection />
+      </motion.div>
+      <motion.div>
+        <SkillSection />
       </motion.div>
     </div>
   );
