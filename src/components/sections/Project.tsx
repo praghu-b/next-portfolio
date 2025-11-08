@@ -7,7 +7,7 @@ import { projects } from "../../data/projects";
 export default function ProjectSection() {
 
     return (
-        <section className="relative min-h-screen w-full bg-muted">
+        <section className="relative min-h-screen w-full">
             <div className="max-w-7xl mx-auto space-y-20">
                 <div className="flex items-center justify-between">
                     <div className="space-y-4">
@@ -22,13 +22,20 @@ export default function ProjectSection() {
                         #CodeInAction
                     </motion.p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
                             className="relative h-80 border-1 border-primary/20 overflow-hidden"
                             initial="initial"
                             whileHover="hover"
+                            whileInView="view"
+                            variants={{
+                                initial: { opacity: 0, y: 20 },
+                                hover: {},
+                                view: { opacity: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.6, ease: "easeInOut" }}
                         >
                             <div className="flex flex-col border-2 border-primary/10 shadow-lg rounded-2xl">
                                 <motion.div
