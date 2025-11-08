@@ -35,7 +35,7 @@ export default function ProjectSection() {
                         <div className="space-y-5">
                             <div className="flex items-center space-x-3">
                                 <div className="w-4 h-4 rounded-full bg-blue-400 shadow-md"></div>
-                                <div>
+                                <div className="space-y-3">
                                     <p className="text-xl font-semibold">Core Expertise (Inner Ring)</p>
                                     <p className="text-accent">Daily use, high proficiency, mentoring level.</p>
                                 </div>
@@ -43,7 +43,7 @@ export default function ProjectSection() {
 
                             <div className="flex items-center space-x-3">
                                 <div className="w-4 h-4 rounded-full bg-emerald-400 shadow-md"></div>
-                                <div>
+                                <div className="space-y-3">
                                     <p className="text-xl font-semibold">Advanced Skills</p>
                                     <p className="text-accent">Experienced with complex features and frameworks.</p>
                                 </div>
@@ -51,7 +51,7 @@ export default function ProjectSection() {
 
                             <div className="flex items-center space-x-3">
                                 <div className="w-4 h-4 rounded-full bg-violet-400 shadow-md"></div>
-                                <div>
+                                <div className="space-y-3">
                                     <p className="text-xl font-semibold">Familiar & Competent</p>
                                     <p className="text-accent">Regular use on projects, solid foundation.</p>
                                 </div>
@@ -59,7 +59,7 @@ export default function ProjectSection() {
 
                             <div className="flex items-center space-x-3">
                                 <div className="w-4 h-4 rounded-full bg-cyan-400 shadow-md"></div>
-                                <div>
+                                <div className="space-y-3">
                                     <p className="text-xl font-semibold">Exploring & Learning (Outer Ring)</p>
                                     <p className="text-accent">Currently learning or used on simple projects.</p>
                                 </div>

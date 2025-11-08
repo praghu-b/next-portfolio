@@ -52,6 +52,7 @@ export const skillsData = {
         { icon: SiHtml5, name: "HTML5", style: 'text-orange-600' },
         { icon: SiCss3, name: "CSS3", style: 'text-blue-600' },
         { icon: SiJavascript, name: "JavaScript", style: 'text-yellow-500' },
+        { icon: SiBootstrap, name: "Bootstrap", style: 'text-purple-600' },
         { icon: SiOpenai, name: "OpenAI LLM", style: 'text-gray-700' },
         { icon: SiGooglegemini, name: "Gemini LLM", style: 'text-purple-500' },
     ],
