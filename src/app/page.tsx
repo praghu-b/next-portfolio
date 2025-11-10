@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/About";
 import ProjectSection from "@/components/sections/Project";
 import SkillSection from "@/components/sections/Skill";
 import ContactSection from "@/components/sections/Contact";
+import FooterSection from "@/components/sections/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
       <motion.div>
         <ContactSection />
       </motion.div>
+      {/* <motion.div>
+        <FooterSection />
+      </motion.div> */}
     </div>
   );
 }

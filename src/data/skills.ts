@@ -24,6 +24,7 @@ import {
     SiGithub,
     SiOpenai,
     SiGooglegemini,
+    SiFramer
 } from "react-icons/si";
 
 export const skillsData = {
@@ -45,6 +46,7 @@ export const skillsData = {
         { icon: SiPostman, name: "Postman", style: 'text-orange-500' },
         { icon: SiFastapi, name: "FastAPI", style: 'text-green-600' },
         { icon: SiFlask, name: "Flask", style: 'text-red-600' },
+        { icon: SiFramer, name: "Framer Motion", style: 'text-black' },
     ],
     fourth: [ // Others & AI Tools
         { icon: SiMui, name: "Material UI", style: 'text-blue-500' },

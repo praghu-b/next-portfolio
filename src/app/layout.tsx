@@ -3,6 +3,7 @@ import { Bebas_Neue, Climate_Crisis, Geist, Geist_Mono, Knewave, Petit_Formal_Sc
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import ProgressBar from "@/components/ui/ProgressBar";
+import BackToTop from "@/components/ui/BackToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({
       >
         <ProgressBar />
         <Navbar />
+        <BackToTop />
         {children}
       </body>
     </html>
