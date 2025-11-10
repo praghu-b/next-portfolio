@@ -5,10 +5,16 @@ import { FaSearch } from "react-icons/fa";
 export default function Timeline() {
     return (
         <div>
-            <div className="text-center my-15 space-y-4">
-                <h1 className="text-2xl font-bold">My Journey So Far</h1>
+            <motion.div
+                className="text-center my-15 space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeInOut' }}
+                viewport={{ once: true, amount: 1 }}
+            >
+                <h1 className="text-2xl font-playfair font-extrabold">My Journey So Far</h1>
                 <h3 className="text-accent">A quick look at how I’ve grown as a developer</h3>
-            </div>
+            </motion.div>
             <div className="relative w-full py-12 scrollbar-hide timeline-scroll">
                 <div className="flex flex-col gap-20 relative">
                     <motion.div

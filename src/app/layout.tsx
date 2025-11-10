@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Geist, Geist_Mono, Playwrite_DE_SAS, Roboto } from "next/font/google";
+import { Bebas_Neue, Geist, Geist_Mono, Playwrite_DE_SAS, Roboto, Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import ProgressBar from "@/components/common/ProgressBar";
@@ -33,6 +33,18 @@ const fancy = Playwrite_DE_SAS({
   variable: "--font-fancy"
 })
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: "--font-playfair"
+})
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ['400'],
+  variable: "--font-lato"
+})
+
 export const metadata: Metadata = {
   title: "Prakash B - Portfolio",
   description: "Full Stack Developer",
@@ -46,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} ${fancy.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} ${fancy.variable} ${playfair.variable} ${lato.variable} antialiased`}
       >
         <ProgressBar />
         <Navbar />

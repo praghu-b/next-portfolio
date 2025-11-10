@@ -5,21 +5,18 @@ import Timeline from "../ui/Timeline";
 
 export default function About() {
     return (
-        <section className="w-full min-h-screen flex items-center justify-center">
+        <section id="about" className="w-full min-h-screen flex items-center justify-center">
             <motion.div
                 className="max-w-7xl"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <motion.div
                     className="space-y-4 mb-10 text-center"
-                    initial={{ opacity: 0, y: -30 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true }}
                 >
-                    <p className="text-4xl font-bold">About Me</p>
+                    <p className="text-4xl font-playfair font-extrabold">About Me</p>
                     <motion.p
                         className="text-lg text-accent font-semibold"
                         animate={{ opacity: [0.5, 1, 0.5] }}
@@ -28,7 +25,13 @@ export default function About() {
                         #OpenToWork
                     </motion.p>
                 </motion.div>
-                <div className="flex items-center justify-between">
+                <motion.div
+                    className="flex items-center justify-between"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                >
                     <div className="flex-1 h-[300px] bg-primary relative overflow-hidden">
                         <Image
                             src={Prakash}
@@ -44,7 +47,7 @@ export default function About() {
                             <p className="text-accent"> I’m currently looking for a <span className="font-semibold">full-time Software Engineer</span> or <span className="font-semibold">internship-to-placement</span> role. When I’m not coding, you’ll find me exploring new ideas and tech rabbit holes.</p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <Timeline />
             </motion.div>
         </section>

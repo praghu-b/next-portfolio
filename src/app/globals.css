@@ -27,6 +27,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -39,6 +43,26 @@ body {
 
 .font-fancy {
   font-family: var(--font-fancy);
+}
+
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
+
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
+
+.font-roboto {
+  font-family: var(--font-roboto);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-lato {
+  font-family: var(--font-lato);
 }
 
 .invert-img {
