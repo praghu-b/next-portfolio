@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLocationDot, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 import { MdMail, MdOutlineFileDownload } from "react-icons/md";
-import Notifier from "../common/Notifier";
+import Notifier from "../ui/Notifier";
 import FooterSection from "./Footer";
 import { Button } from "../common/Button";
 

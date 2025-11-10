@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Climate_Crisis, Geist, Geist_Mono, Knewave, Petit_Formal_Script, Playwrite_DE_SAS, Roboto, Syne_Mono, The_Nautigal, Zen_Dots } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/ui/Navbar";
-import ProgressBar from "@/components/ui/ProgressBar";
-import BackToTop from "@/components/ui/BackToTop";
+import Navbar from "@/components/common/Navbar";
+import ProgressBar from "@/components/common/ProgressBar";
+import BackToTop from "@/components/common/BackToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
