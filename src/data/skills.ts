@@ -8,7 +8,6 @@ import {
     SiNodedotjs,
     SiExpress,
     SiMongodb,
-    SiPython,
     SiDjango,
     SiGit,
     SiBootstrap,
@@ -18,8 +17,6 @@ import {
     SiFirebase,
     SiLangchain,
     SiPostman,
-    SiTensorflow,
-    SiMaterialdesign,
     SiMui,
     SiGithub,
     SiOpenai,
@@ -57,6 +54,7 @@ export const skillsData = {
         { icon: SiBootstrap, name: "Bootstrap", style: 'text-purple-600' },
         { icon: SiOpenai, name: "OpenAI LLM", style: 'text-gray-700' },
         { icon: SiGooglegemini, name: "Gemini LLM", style: 'text-purple-500' },
+        { icon: SiFirebase, name: "Firebase", style: 'text-orange-600' },
     ],
 };
 

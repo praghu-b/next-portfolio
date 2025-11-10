@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Home, BookUser, FolderCode, PhoneForwarded } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
