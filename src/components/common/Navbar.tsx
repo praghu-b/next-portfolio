@@ -57,7 +57,7 @@ export default function Navbar() {
                                         initial={{ scale: 1 }}
                                         whileHover={{ scale: 1.2 }}
                                     >
-                                        {/* <Icon className="h-5 w-5" /> */}
+                                        <Icon className="h-5 w-5" />
                                         <span>{label}</span>
                                     </motion.div>
                                 </a>
