@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Timeline() {
     return (
-        <div>
+        <div className="container mx-auto px-4">
             <motion.div
                 className="text-center my-15 space-y-4"
                 initial={{ opacity: 0, y: 20 }}
@@ -15,10 +15,10 @@ export default function Timeline() {
                 <h1 className="text-2xl font-playfair font-extrabold">My Journey So Far</h1>
                 <h3 className="text-accent">A quick look at how I’ve grown as a developer</h3>
             </motion.div>
-            <div className="relative w-full py-12 scrollbar-hide timeline-scroll">
+            <div className="relative w-full md:py-12 scrollbar-hide timeline-scroll">
                 <div className="flex flex-col gap-20 relative">
                     <motion.div
-                        className="absolute left-1/2 min-h-full w-[2px] bg-gray-300 -translate-x-1/2"
+                        className="absolute left-0 md:left-1/2 min-h-full w-[2px] bg-gray-300 md:-translate-x-1/2"
                         initial={{ scaleY: 0 }}
                         animate={{ scaleY: 1 }}
                         transition={{ duration: 1 }}
@@ -26,26 +26,26 @@ export default function Timeline() {
                     {journey.map(({ title, role, desc, year, icon: Icon }, index) => (
                         <motion.div
                             key={index}
-                            className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"} relative`}
+                            className={`flex justify-start ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"} relative`}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.6 }}
                         >
                             <motion.div
-                                className={`w-1/3 ${index % 2 === 0 ? "ml-25 p-5" : "mr-25 p-5"} text-${index % 2 === 0 ? "left" : "right"} bg-muted border-2 border-gray-200 rounded-3xl shadow-lg space-y-3`}
+                                className={`w-full sm:w-11/12 md:w-1/3 ml-8 p-3 md:p-5 md:ml-0 md:mr-0 ${index % 2 === 0 ? "md:ml-25 md:p-5" : "md:mr-25 md:p-5"} text-left bg-muted border-2 border-gray-200 rounded-3xl shadow-lg space-y-3`}
                                 whileHover={{ scale: 1.03 }}
                                 transition={{ type: "spring", stiffness: 200 }}
                             >
-                                <h3 className="text-xl font-semibold">{title}</h3>
-                                <div className="flex items-center gap-3">
+                                <h3 className="md:text-xl font-semibold">{title}</h3>
+                                <div className="flex items-center justify-between md:justify-start md:gap-3">
                                     <p className="text-xs font-semibold py-1 px-2 bg-primary text-white inline-flex rounded-full">{year}</p>
                                     {role && <p className="text-xs font-semibold py-1 px-2 bg-white border-2 border-gray-200 inline-flex rounded-full">{role}</p>}
                                 </div>
-                                <p className="text-gray-500">{desc}</p>
+                                <p className="text-sm md:text-base text-gray-500">{desc}</p>
                             </motion.div>
                             <motion.div
-                                className="absolute left-1/2 top-1/2 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2 shadow-lg"
+                                className="absolute left-0 top-1/2 bg-primary rounded-full -translate-x-1/2 -translate-y-1/2 shadow-lg md:left-1/2"
                                 initial={{ scale: 0 }}
                                 whileInView={{ scale: 1 }}
                                 viewport={{ once: false }}
@@ -55,6 +55,7 @@ export default function Timeline() {
                             </motion.div>
                         </motion.div>
                     ))}
+
                     <motion.div
                         className={`flex justify-center relative`}
                         initial={{ opacity: 0, y: 50 }}
@@ -63,7 +64,7 @@ export default function Timeline() {
                         transition={{ duration: 0.6 }}
                     >
                         <motion.div
-                            className={`w-1/3 p-5 text-center bg-gradient-to-r from-black to-primary border-2 rounded-3xl shadow-lg space-y-3`}
+                            className={`w-full sm:w-11/12 md:w-1/3 p-5 text-center bg-gradient-to-r from-black to-primary border-2 rounded-3xl shadow-lg space-y-3`}
                             whileHover={{ scale: 1.03 }}
                             transition={{ type: "spring", stiffness: 200 }}
                         >

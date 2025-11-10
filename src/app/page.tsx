@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative space-y-10">
+    <div className="relative space-y-5">
       <motion.div>
         <HeroSection />
       </motion.div>
