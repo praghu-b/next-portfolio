@@ -15,7 +15,7 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
 
   return (
-    <div className="relative space-y-24">
+    <div className="relative space-y-10">
       <motion.div>
         <HeroSection />
       </motion.div>
