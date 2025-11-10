@@ -9,7 +9,7 @@ export default function FooterSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
-                viewport={{ once: true, amount: 1 }}
+                viewport={{ once: true }}
             >
                 <div className="flex-2 text-center space-y-1">
                     <p className="text-muted text-xs">© 2025, All Rights Reserved.</p>

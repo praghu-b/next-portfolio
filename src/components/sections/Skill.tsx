@@ -9,7 +9,7 @@ export default function ProjectSection() {
         <section id="skills" className="w-full py-10 md:py-20 overflow-x-hidden">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
-                    className="space-y-4 mb-16 text-center"
+                    className="space-y-4 mb-10 md:mb-16 text-center"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
@@ -21,11 +21,8 @@ export default function ProjectSection() {
                     </p>
                 </motion.div>
 
-                {/* This div's `items-center` will center both children horizontally in `flex-col` (mobile) view */}
                 <div className="flex flex-col md:flex-row items-center justify-around md:gap-4">
 
-                    {/* --- LEGEND --- */}
-                    {/* Set to w-full on mobile, and flex-1 (to take up space) on desktop */}
                     <motion.div
                         className="w-full md:flex-1"
                         initial={{ opacity: 0, x: -30 }}
@@ -33,9 +30,8 @@ export default function ProjectSection() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true, amount: 0.5 }}
                     >
-                        <h3 className="text-4xl sm:text-5xl font-playfair font-extrabold mb-10 text-center md:text-left">The Skill Chakra</h3>
+                        <h3 className="text-3xl sm:text-5xl font-playfair font-extrabold mb-10 text-center md:text-left">The Skill Chakra</h3>
 
-                        {/* This div is centered on mobile (mx-auto) and left-aligned on desktop (md:mx-0) */}
                         <div className="space-y-5 md:w-3/5 px-5 md:px-0 mx-auto md:mx-0">
                             <div className="flex items-center space-x-3 text-white bg-blue-700/80 rounded">
                                 <div className="space-y-2 px-4 py-2">
@@ -43,7 +39,6 @@ export default function ProjectSection() {
                                     <p className="text-sm">Daily use, high proficiency, mentoring level.</p>
                                 </div>
                             </div>
-                            {/* ...other legend boxes... */}
                             <div className="flex items-center space-x-3 text-white bg-emerald-700/80 rounded">
                                 <div className="space-y-2 px-4 py-2">
                                     <p className="text-lg font-semibold">Advanced Skills</p>
@@ -65,8 +60,6 @@ export default function ProjectSection() {
                         </div>
                     </motion.div>
 
-                    {/* --- CHAKRA --- */}
-                    {/* KEY CHANGE: Removed `mx-auto`. The parent's `items-center` now controls centering. */}
                     <div className="relative flex items-center justify-center scale-[0.70] sm:scale-[0.8] lg:scale-80">
                         <motion.div
                             className="relative w-[500px] h-[500px] flex items-center justify-center border border-cyan-400/40 rounded-full shadow-[0_0_25px_8px_rgba(34,211,238,0.4)]"
