@@ -35,7 +35,7 @@ export default function About() {
                     {/* Image */}
                     <div className="relative w-full md:w-[40%] h-[250px] md:h-[300px] rounded-xl overflow-hidden shadow-lg">
                         <Image
-                            src='/me/ooty-landscape.jpeg'
+                            src='/Me/ooty-landscape.jpeg'
                             alt="Image of Prakash"
                             fill
                             className="object-cover object-[50%_10%] scale-110"
