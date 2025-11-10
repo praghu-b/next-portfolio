@@ -1,21 +1,9 @@
 import Image from "next/image"
 import Prakash from '../../../public/me/ooty-landscape.jpeg';
-import { Linkedin, Mail, Github, Instagram } from "lucide-react";
-import { FaGraduationCap, FaSearch, FaUsers } from "react-icons/fa";
-import { MdOutlineWork } from "react-icons/md";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { journey } from "@/data/about";
 import Timeline from "../ui/Timeline";
 
 export default function About() {
-    const socialLinks = [
-        { label: "LinkedIn", icon: Linkedin, link: 'https://linkedin.com/in/prakash-balamurugan' },
-        { label: "Email", icon: Mail, link: 'mailto:prakashbalan555@gmail.com' },
-        { label: "GitHub", icon: Github, link: 'https://github.com/praghu-b' },
-        { label: "Instagram", icon: Instagram, link: 'https://instagram.com/praghu._b' }
-    ]
-
     return (
         <section className="w-full min-h-screen flex items-center justify-center">
             <motion.div
