@@ -1,7 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { TiTick, TiTimes } from "react-icons/ti";
 
-export default function Notifier({ message, type }: { message: string; type: 'success' | 'error' }) {
+export type NotifierProps = {
+    message: string,
+    type: "success" | "error",
+}
+
+export default function Notifier({ message, type }: NotifierProps) {
     return (
         <AnimatePresence>
             {message && (

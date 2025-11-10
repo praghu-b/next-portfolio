@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaLocationDot, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
 import { MdMail, MdOutlineFileDownload } from "react-icons/md";
 import Notifier from "../ui/Notifier";
 import FooterSection from "./Footer";
 import { Button } from "../common/Button";
+
+type NotificationType = "error" | "success";
+
+type Notification = {
+    message: string;
+    type: NotificationType,
+}
 
 export default function ContactSection() {
     const socialLinks = [
@@ -14,13 +21,15 @@ export default function ContactSection() {
         { label: "GitHub", icon: FaGithub, link: 'https://github.com/praghu-b' },
         { label: "Instagram", icon: FaInstagram, link: 'https://instagram.com/praghu._b' },
     ]
-
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
     })
-    const [notification, setNotification] = useState({ message: '', type: 'success' });
+    const [notification, setNotification] = useState<Notification>({
+        message: '',
+        type: 'success'
+    });
 
     const handleChange = (e: any) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -105,7 +114,6 @@ export default function ContactSection() {
                     viewport={{ once: true, amount: 0.5 }}
                 >
                     <h2 className="text-2xl text-center text-white font-bold">Get In Touch</h2>
-                    {/* <hr className="mx-10 border-1 text-primary/40" /> */}
                     <form className="space-y-10 py-5 text-white text-sm placeholder-white mx-10 md:mx-0" onSubmit={handleSubmit}>
                         <input className="w-full border-b-2 pb-2 focus:outline-none focus:ring-0" type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Name" />
                         <input className="w-full border-b-2 pb-2 focus:outline-none focus:ring-0" type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Email" />
