@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Prakash from '../../../public/me/ooty-landscape.jpeg';
 import { motion } from "framer-motion";
 import Timeline from "../ui/Timeline";
 
@@ -36,7 +35,7 @@ export default function About() {
                     {/* Image */}
                     <div className="relative w-full md:w-[40%] h-[250px] md:h-[300px] rounded-xl overflow-hidden shadow-lg">
                         <Image
-                            src={Prakash}
+                            src='/me/ooty-landscape.jpeg'
                             alt="Image of Prakash"
                             fill
                             className="object-cover object-[50%_10%] scale-110"

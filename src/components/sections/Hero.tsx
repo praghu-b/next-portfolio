@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Prakash from '../../../public/Me/prakash-full.jpg';
 import { Code2, Download } from 'lucide-react';
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdMail } from 'react-icons/md';
@@ -22,7 +21,7 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                 >
                     <div className='overflow-hidden rounded-full border-10 border-white shadow-2xl shadow-black/70'>
-                        <Image src={Prakash} alt='Image of Prakash' className='w-[300px] h-[300px] md:w-[400px] md:h-[400px] scale-115 object-cover object-[30%_70%]' />
+                        <Image src="/me/prakash-full.jpg" alt='Image of Prakash' className='w-[300px] h-[300px] md:w-[400px] md:h-[400px] scale-115 object-cover object-[30%_70%]' width={400} height={400}/>
                     </div>
                     <p className='absolute top-10 md:top-4 left-0 md:left-5 font-fancy bg-primary text-white py-2 px-4 rounded-full font-semibold text-lg md:text-xl'>Hello! I'm Prakash</p>
                 </motion.div>

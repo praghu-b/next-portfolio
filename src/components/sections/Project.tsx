@@ -60,10 +60,11 @@ export default function ProjectSection() {
                                     }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    <img
+                                    <Image
                                         src={project.image}
                                         alt={project.title}
                                         className="w-full h-full object-cover absolute inset-0"
+                                        fill
                                     />
                                 </motion.div>
 
