@@ -37,39 +37,22 @@ body {
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
 
-.font-climate {
-  font-family: var(--font-climate-crisis);
+.font-bebas {
+  font-family: var(--font-bebas);
 }
 
-.font-fancy {
-  font-family: var(--font-fancy);
-}
-
-.font-geist-sans {
-  font-family: var(--font-geist-sans);
-}
-
-.font-geist-mono {
-  font-family: var(--font-geist-mono);
-}
-
-.font-roboto {
-  font-family: var(--font-roboto);
+.font-playwrite {
+  font-family: var(--font-playwrite);
 }
 
 .font-playfair {
   font-family: var(--font-playfair);
 }
 
-.font-lato {
-  font-family: var(--font-lato);
-}
-
 .invert-img {
   transform: scaleX(-1);
 }
 
-/* Hide scrollbar but keep scroll functionality */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

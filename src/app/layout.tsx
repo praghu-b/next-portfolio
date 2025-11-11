@@ -6,44 +6,21 @@ import ProgressBar from "@/components/common/ProgressBar";
 import BackToTop from "@/components/common/BackToTop";
 import { Analytics } from "@vercel/analytics/next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const climatecrisis = Bebas_Neue({
+const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
   weight: ['400'],
-  variable: "--font-climate-crisis"
+  variable: "--font-bebas"
 })
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ['400', '500', '700'],
-  variable: "--font-roboto",
-})
-
-const fancy = Playwrite_DE_SAS({
-  // subsets: ["latin"],
+const playwrite = Playwrite_DE_SAS({
   weight: ['400'],
-  variable: "--font-fancy"
+  variable: "--font-playwrite"
 })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ['400'],
   variable: "--font-playfair"
-})
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ['400'],
-  variable: "--font-lato"
 })
 
 export const metadata: Metadata = {
@@ -59,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${climatecrisis.variable} ${roboto.variable} ${fancy.variable} ${playfair.variable} ${lato.variable} antialiased`}
+        className={`${bebasNeue.variable} ${playwrite.variable} ${playfair.variable} antialiased`}
       >
         <ProgressBar />
         <Navbar />

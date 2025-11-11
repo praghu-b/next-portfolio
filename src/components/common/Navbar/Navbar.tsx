@@ -36,7 +36,7 @@ export default function Navbar() {
                     >
                         {menuOpen ? <TiTimes size={28} /> : <MdOutlineMenu size={28} />}
                     </button>
-                    <span className="hidden md:block text-4xl"><span className="text-5xl font-bold font-climate">P</span>rakash</span>
+                    <span className="hidden md:block text-4xl"><span className="text-5xl font-bold font-bebas">P</span>rakash</span>
                 </div>
 
                 <div className="hidden md:flex flex-1 items-center justify-center font-semibold text-black">
