@@ -21,11 +21,11 @@ export default function BackToTop() {
             {visible && (
                 <motion.button
                     onClick={scrollToTop}
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: 50, scale: 1 }}
                     animate={{ opacity: 1, x: 0 }}
+                    whileHover={{ scale: 1.2 }}
                     exit={{ opacity: 0, x: 50 }}
-                    // transition={{ duration: 0.3 }}
-                    className="fixed bottom-20 right-5 md:right-10 z-100 p-3 bg-primary text-white shadow-lg hover:scale-110 rounded-full cursor-pointer"
+                    className="fixed bottom-20 right-5 md:right-10 z-100 p-3 bg-primary border border-white text-white shadow-lg rounded-full cursor-pointer"
                 >
                     <FaArrowUp className="w-8 h-8" />
                 </motion.button>
