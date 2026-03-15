@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next Portfolio
+
+A personal portfolio built with Next.js, featuring an AI-powered voice assistant that answers questions about Prakash using a structured knowledge base.
+
+## Features
+
+- AI voice assistant widget integrated into the portfolio UI
+- Speech-to-text input using browser Speech Recognition APIs
+- Text-to-speech assistant responses with live speaking/listening animations
+- Knowledge-base-grounded responses (education, projects, skills, experience)
+- Rate-limit aware assistant flow with retry guidance
+- Server-side conversation logging in JSONL format
+- Prompt-response-only persistence for lightweight analytics and reuse
+- Responsive layout with animated sections and assistant interactions
+
+## Tech Stack
+
+- Next.js 15 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- Framer Motion
+- Groq Chat Completions API (OpenAI-compatible endpoint)
+- Biome (formatting and linting)
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure environment variables
+
+Create a local environment file and add the values below.
+
+```env
+MODEL=<your_model_name>
+API_KEY=<your_groq_api_key>
+CONVERSATION_LOG_DIR=conversations
+CONVERSATION_LOG_MAX_CHARS=4000
+```
+
+Supported aliases:
+
+- `MODEL` or `LLM_MODEL`
+- `API_KEY` or `LLM_API_KEY`
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: App Router pages, layout, and API routes
+- `src/components`: UI sections, common components, assistant widget
+- `src/hooks`: custom React hooks including voice assistant behavior
+- `src/data`: static portfolio data and assistant knowledge base
+- `src/lib`: server-side utilities such as conversation logging
+- `docs`: architecture and API documentation
 
-## Learn More
+## Voice Assistant Endpoint
 
-To learn more about Next.js, take a look at the following resources:
+- Route: `POST /api/voice-assistant`
+- Accepts chat messages
+- Injects a server-side system prompt built from `src/data/knowledge_base.json`
+- Returns assistant response content and rate-limit metadata
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See full API docs: `docs/api.md`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Documentation
 
-## Deploy on Vercel
+- Architecture explanation: `docs/architecture.md`
+- API documentation: `docs/api.md`
+- Conversation logging: `docs/conversation-logging.md`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev`: Start local dev server with Turbopack
+- `npm run build`: Build for production
+- `npm run start`: Start production server
+- `npm run lint`: Run Biome checks
+- `npm run format`: Format code with Biome
+
+## Notes
+
+- Conversation logs are intended for local or self-hosted Node runtime persistence.
+- Logging failures are non-blocking and do not fail assistant responses.
+- Do not commit real secrets in repository-tracked files.

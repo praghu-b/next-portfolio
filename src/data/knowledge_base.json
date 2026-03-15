@@ -1,0 +1,188 @@
+{
+  "profile": {
+    "full_name": "Prakash Balamurugan",
+    "role": "Full Stack Developer",
+    "location": "Coimbatore, Tamil Nadu",
+    "summary": "Final-year Computer Science Engineering student with hands-on experience building web applications and AI-powered products. Experienced with React, Next.js, Node.js, and Django, with a growing focus on AI agents and intelligent systems. Passionate about building practical software that solves real-world problems."
+  },
+  "education": {
+    "degree": "BE Computer Science Engineering",
+    "college": "SNS College of Technology",
+    "institution_group": "SNS Institutions",
+    "university": "Anna University (Affiliated)",
+    "duration": "2022 - 2026",
+    "cgpa": "7.7 (till 7th semester)"
+  },
+  "experience": [
+    {
+      "company": "SNS Innovation Hub",
+      "role": "Full Stack Developer Intern",
+      "duration": "Sep 2024 - Jul 2025",
+      "type": "Paid (full-time)",
+      "work": [
+        "Explored AI technologies including Generative AI, LLMs, RAG pipelines, LangChain, LangGraph, and agentic AI workflows through hands-on experimentation.",
+        "Contributed to the development of a Student Management Portal used by faculties and administrators to conduct tests and review student performance.",
+        "Worked on both frontend and backend development.",
+        "Participated in feature planning and scrum meetings.",
+        "Fixed bugs, tested features, and maintained development tracking sheets.",
+        "Collaborated with team members and assisted other developers when needed."
+      ],
+      "projects": [
+        {
+          "name": "Student Management Portal",
+          "description": "A platform used by faculties to conduct tests and allow administrators like HOD, principal, and technical directors to review student performance.",
+          "tech_stack": [
+            "React.js",
+            "Django",
+            "Python",
+            "MongoDB",
+            "JavaScript",
+            "LLM integration for generating questions"
+          ]
+        },
+        {
+          "name": "StartzyAI",
+          "description": "An AI-powered platform that helps startups validate ideas through market analysis and structured product planning.",
+          "contributions": [
+            "Migrated frontend from React.js to Next.js",
+            "Built and tested multiple product features",
+            "Fixed bugs and maintained testing sheets",
+            "Participated in scrum meetings and product discussions"
+          ],
+          "tech_stack": [
+            "Next.js",
+            "React.js",
+            "Express.js",
+            "MongoDB",
+            "LangChain",
+            "LangGraph",
+            "Postman",
+            "Git",
+            "GitHub"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "The Reciprocal Solutions",
+      "role": "Web Developer Intern",
+      "duration": "Jun 2023 - Mar 2024",
+      "type":"Paid (part-time)",
+      "work": [
+        "Developed server-side rendered cab booking websites.",
+        "Communicated with clients to understand requirements and implement requested features.",
+        "Worked on websites related to tours and travels and real estate services.",
+        "Handled deployment of applications on DigitalOcean."
+      ],
+      "tech_stack": [
+        "Node.js",
+        "Express.js",
+        "EJS",
+        "MongoDB",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "DigitalOcean",
+        "Fast2SMS API",
+        "Postman",
+        "Git",
+        "GitHub"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "StartzyAI",
+      "description": "An AI-powered platform that guides startups from idea to market-ready product by automating stages such as prototype creation, feature planning, and customer feedback collection.",
+      "target_users": [
+        "early-stage founders",
+        "students building startups",
+        "startup incubators",
+        "non-technical entrepreneurs"
+      ],
+      "features": [
+        "AI-driven questions to identify startup problems and opportunities",
+        "Analysis of similar apps to refine product features",
+        "AI-generated feature lists categorized as MVP, PMF, and backlog",
+        "External survey generation for collecting customer feedback",
+        "Automatic generation of business models, SWOT analysis, market size, and competitive analysis"
+      ],
+      "tech_stack": [
+        "Next.js",
+        "React.js",
+        "Express.js",
+        "MongoDB",
+        "LangChain",
+        "LangGraph",
+        "LLM APIs",
+        "Git",
+        "GitHub"
+      ]
+    }
+  ],
+  "skills": {
+    "frontend": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "TailwindCSS",
+      "Bootstrap",
+      "Material UI",
+      "Framer Motion",
+      "Responsive Web Design",
+      "API Integration"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Django",
+      "Python",
+      "REST API Development"
+    ],
+    "databases": [
+      "MongoDB"
+    ],
+    "ai_and_llm": [
+      "LLM Integration",
+      "Prompt Engineering",
+      "Retrieval Augmented Generation (RAG)",
+      "LangChain",
+      "LangGraph",
+      "AI Agents",
+      "Agentic AI",
+      "Model Context Protocol (MCP)",
+      "Vector Databases"
+    ],
+    "tools": [
+      "Git",
+      "GitHub",
+      "Postman",
+      "VS Code",
+      "Cursor IDE",
+      "DigitalOcean"
+    ]
+  },
+  "career_goals": {
+    "current_goal": "Looking for an entry-level full-stack or software engineering role in the IT industry.",
+    "future_goal": "Aiming to work at leading technology companies such as Google, Amazon, or Microsoft within the next few years while continuing to develop expertise in AI-powered systems and software engineering."
+  },
+  "interests": [
+    "Full-stack development",
+    "AI-powered applications",
+    "AI agents and automation",
+    "Learning new technologies",
+    "Practicing data structures and algorithms"
+  ],
+  "contact": {
+    "email": "prakashbalan555@gmail.com",
+    "linkedin": "https://linkedin.com/in/prakash-balamurugan",
+    "github": "https://github.com/praghu-b",
+    "portfolio": "https://prakash-b.vercel.app/"
+  },
+  "languages": [
+    "English",
+    "Tamil"
+  ]
+}
