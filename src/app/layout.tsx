@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/common/Navbar/Navbar";
 import ProgressBar from "@/components/common/ProgressBar";
 import BackToTop from "@/components/common/BackToTop";
+import VoiceAssistantWidget from "@/components/assistant/VoiceAssistantWidget";
 import { Analytics } from "@vercel/analytics/next";
 
 const bebasNeue = Bebas_Neue({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <ProgressBar />
         <Navbar />
         <BackToTop />
+        <VoiceAssistantWidget />
         {children}
         <Analytics />
       </body>
