@@ -111,7 +111,7 @@ export default function VoiceAssistantWidget() {
                   </motion.div>
                 </div>
 
-                <div className="flex flex-col items-center gap-3 h-30">
+                <div className="flex flex-col items-center gap-3 h-10">
                   <div className="flex items-end gap-1 min-h-10">
                     {WAVE_BARS.map((barKey, i) => (
                       <motion.span
@@ -120,15 +120,15 @@ export default function VoiceAssistantWidget() {
                         animate={
                           isSpeaking
                             ? {
-                                height: [
-                                  6 + (i % 3) * 4,
-                                  22 + (i % 4) * 3,
-                                  10 + (i % 3) * 4,
-                                ],
-                              }
+                              height: [
+                                6 + (i % 3) * 4,
+                                22 + (i % 4) * 3,
+                                10 + (i % 3) * 4,
+                              ],
+                            }
                             : {
-                                height: [8, 8, 8],
-                              }
+                              height: [8, 8, 8],
+                            }
                         }
                         transition={{
                           duration: 0.7 + (i % 4) * 0.05,
@@ -139,51 +139,53 @@ export default function VoiceAssistantWidget() {
                       />
                     ))}
                   </div>
-                  <div className="w-[min(90vw,28rem)] min-h-[4.5rem] max-h-28 px-3 py-2 text-center font-semibold">
-                    <AnimatePresence mode="wait">
-                      <motion.p
-                        key={activeDisplayMode}
-                        initial={{ opacity: 0, y: 4 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -4 }}
-                        transition={{ duration: 0.2 }}
-                        className={`text-sm leading-6 ${panelText ? "text-black/75" : "text-black/40"}`}
-                      >
-                        {panelText ||
-                          "Tap the mic and ask about Prakash's work."}
-                      </motion.p>
-                    </AnimatePresence>
-                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-4">
-                <button
-                  type="button"
-                  onClick={toggleMic}
-                  disabled={!supportsSpeechRecognition}
-                  className={`flex items-center justify-center w-11 h-11 rounded-full border transition-colors ${
-                    isListening
-                      ? "bg-red-500 border-red-400 text-white"
-                      : "bg-slate-900/70 border-slate-400/80 text-slate-100"
-                  } ${!supportsSpeechRecognition ? "opacity-50 cursor-not-allowed" : ""}`}
-                  aria-label={
-                    isListening ? "Stop listening" : "Start listening"
-                  }
-                >
-                  {isListening ? (
-                    <FaMicrophoneSlash className="w-5 h-5" />
-                  ) : (
-                    <FaMicrophone className="w-5 h-5" />
-                  )}
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm px-4 py-2 font-semibold rounded-full bg-white/10 text-black hover:bg-white/20 border-2 border-black/30"
-                >
-                  Close
-                </button>
+              {/* Move the response panel below the buttons */}
+              <div className="flex flex-col items-center w-full">
+                <div className="flex items-center justify-center gap-4 mb-3">
+                  <button
+                    type="button"
+                    onClick={toggleMic}
+                    disabled={!supportsSpeechRecognition}
+                    className={`flex items-center justify-center w-11 h-11 rounded-full border transition-colors ${isListening
+                        ? "bg-red-500 border-red-400 text-white"
+                        : "bg-slate-900/70 border-slate-400/80 text-slate-100"
+                      } ${!supportsSpeechRecognition ? "opacity-50 cursor-not-allowed" : ""}`}
+                    aria-label={
+                      isListening ? "Stop listening" : "Start listening"
+                    }
+                  >
+                    {isListening ? (
+                      <FaMicrophoneSlash className="w-5 h-5" />
+                    ) : (
+                      <FaMicrophone className="w-5 h-5" />
+                    )}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setIsOpen(false)}
+                    className="text-sm px-4 py-2 font-semibold rounded-full bg-white/10 text-black hover:bg-white/20 border-2 border-black/30"
+                  >
+                    Close
+                  </button>
+                </div>
+                <div className="w-[min(90vw,28rem)] max-h-60 overflow-y-auto px-3 py-2 text-center font-semibold">
+                  <AnimatePresence mode="wait">
+                    <motion.p
+                      key={activeDisplayMode}
+                      initial={{ opacity: 0, y: 4 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -4 }}
+                      transition={{ duration: 0.2 }}
+                      className={`text-sm leading-6 ${panelText ? "text-black/75" : "text-black/40"}`}
+                    >
+                      {panelText ||
+                        "Tap the mic and ask about Prakash's work."}
+                    </motion.p>
+                  </AnimatePresence>
+                </div>
               </div>
             </div>
           </motion.div>
